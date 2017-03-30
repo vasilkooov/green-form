@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style/form.css">
+		<title>Sign-Up-CodeIt</title>
+	</head>
+
+	<body>
+		<div class="container">  
+			<form id="contact" action="" method="post">
+				<h3 class="title-form">Sign Up</h3>
+
+				<fieldset>
+					<input name="name" placeholder="Your Name" type="text" class="input-item" required autofocus>
+				</fieldset>
+				<fieldset>
+					<input name="surname" placeholder="Your Second Name" type="text" class="input-item" required>
+				</fieldset>
+				<fieldset>
+					<input name="email" placeholder="Your Email" type="email" class="input-item" required>
+				</fieldset>
+
+				<fieldset>
+					<select name="gender" id="user-gender" value="Your Gender" required>
+						<option value="Male">Male</option>
+						<option value="Female">Female</option>
+					</select>
+				</fieldset>
+
+				<fieldset>
+					<input name="pass" placeholder="Password" type="password" class="input-item" required>
+				</fieldset>
+				<fieldset>
+					<p>
+						<input type="checkbox" required> Conditions of Agreement
+					</p>	
+				</fieldset>
+
+				<fieldset>
+					<button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+				</fieldset>
+
+			</form>
+		</div>
+
+		<script src="js/form.js"></script>
+	</body>
+</html>
