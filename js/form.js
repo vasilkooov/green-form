@@ -2,9 +2,9 @@
 
 window.onload = function () {
 
- 	document.querySelector('#contact-submit').onclick = function () {
+ 	document.querySelector('#submit').onclick = function () {
+
  		ajaxGet();
- 		
  	}
 
 };
@@ -13,15 +13,24 @@ window.onload = function () {
 function ajaxGet() {
 	var request = new XMLHttpRequest();
 
+	var name = document.getElementById('first-name').value;
+	var secondname = document.getElementById('second-name').value;
+	var email = document.getElementById('email').value;
+	var gender = document.getElementById('user-gender').value;
+	var password = document.getElementById('user-pass').value;
+	var check = document.getElementById('user-check').value;
+
 	request.onreadystatechange = function() {
 		if(request.readyState == 4 && request.status == 200) {
 
 			var result = request.responseText;
-			console.log(result);
-		}
 
+		}
+		
 	}
 
-	request.open('GET', 'https://codeit.pro/frontTestTask/user/registration');
-	request.send();
+		request.open('POST', 'https://codeit.pro/frontTestTask/user/registration', true);
+		request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		request.send("name=" + name + "&secondname=" + secondname + "&email=" + 
+						email + "&gender=" + gender + "&pass=" + password + "&check=" + check);
 };

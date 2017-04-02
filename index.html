@@ -4,42 +4,53 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="style/form.css">
 		<title>Sign-Up-CodeIt</title>
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	</head>
 
 	<body>
-		<div class="container">  
-			<form id="contact" action="" method="post">
+		<div class="container"> 
+
+			<form name="form" id="contact" action="" method="">
 				<h3 class="title-form">Sign Up</h3>
 
-				<fieldset>
-					<input name="name" placeholder="Your Name" type="text" class="input-item" required autofocus>
-				</fieldset>
-				<fieldset>
-					<input name="surname" placeholder="Your Second Name" type="text" class="input-item" required>
-				</fieldset>
-				<fieldset>
-					<input name="email" placeholder="Your Email" type="email" class="input-item" required>
-				</fieldset>
+				<div class="form-line">
+					<input name="first-name" id="first-name" placeholder="Your Name" type="text" class="input-item" autofocus required>
+					<p class="error"></p>
+				</div>
 
-				<fieldset>
+				<div class="form-line">
+					<input name="second-name" id="second-name" minlength="3" maxlength="60" placeholder="Your Second Name" type="text" class="input-item" required>
+					<p class="error"></p>
+				</div>
+
+				<div class="form-line">
+					<input name="email" id="email" placeholder="Your Email" type="email" class="input-item" required>
+					<p class="error"></p>
+				</div>
+
+				<div class="form-line">
 					<select name="gender" id="user-gender" value="Your Gender" required>
-						<option value="Male">Male</option>
-						<option value="Female">Female</option>
+						<option value="male">male</option>
+						<option value="female">female</option>
 					</select>
-				</fieldset>
+					<p class="error"></p>
+				</div>
 
-				<fieldset>
-					<input name="pass" placeholder="Password" type="password" class="input-item" required>
-				</fieldset>
-				<fieldset>
+				<div class="form-line">
+					<input name="pass" id="user-pass" placeholder="Password" type="password" class="input-item" required>
+					<p class="error"></p>
+				</div>
+				
+				<div class="form-line">
 					<p>
-						<input type="checkbox" required> Conditions of Agreement
+						<input type="checkbox" id="user-check" required> Conditions of Agreement
 					</p>	
-				</fieldset>
+					<p class="error"></p>
+				</div>
 
-				<fieldset>
-					<button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-				</fieldset>
+				<div class="form-line">
+					<a href="#" name="submit" id="submit" data-submit="...Sending">Submit</a>
+				</div>
 
 			</form>
 		</div>
