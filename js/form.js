@@ -23,10 +23,18 @@ function ajaxGet() {
 	request.onreadystatechange = function() {
 		if(request.readyState == 4 && request.status == 200) {
 
-			var result = request.responseText;
+			var result = JSON.parse(request.responseText);
+
+
+		var error_elem = document.querySelector('input[name="' + result.field + '"] + p.error');
+		console.log(error_elem);
+
+		error_elem.innerHTML = result.message;
 
 		}
+
 		
+
 	}
 
 		request.open('POST', 'https://codeit.pro/frontTestTask/user/registration', true);

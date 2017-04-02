@@ -13,22 +13,22 @@
 			<form name="form" id="contact" action="" method="">
 				<h3 class="title-form">Sign Up</h3>
 
-				<div class="form-line">
-					<input name="first-name" id="first-name" placeholder="Your Name" type="text" class="input-item" autofocus required>
+				<div class="form-group">
+					<input name="first-name" id="first-name" minlength="3" maxlength="60" placeholder="Your Name" type="text" class="input-item" autofocus required>
 					<p class="error"></p>
 				</div>
 
-				<div class="form-line">
-					<input name="second-name" id="second-name" minlength="3" maxlength="60" placeholder="Your Second Name" type="text" class="input-item" required>
+				<div class="form-group">
+					<input name="secondname" id="second-name" minlength="3" maxlength="60" placeholder="Your Second Name" type="text" class="input-item" required>
 					<p class="error"></p>
 				</div>
 
-				<div class="form-line">
+				<div class="form-group">
 					<input name="email" id="email" placeholder="Your Email" type="email" class="input-item" required>
 					<p class="error"></p>
 				</div>
 
-				<div class="form-line">
+				<div class="form-group">
 					<select name="gender" id="user-gender" value="Your Gender" required>
 						<option value="male">male</option>
 						<option value="female">female</option>
@@ -36,19 +36,19 @@
 					<p class="error"></p>
 				</div>
 
-				<div class="form-line">
+				<div class="form-group">
 					<input name="pass" id="user-pass" placeholder="Password" type="password" class="input-item" required>
 					<p class="error"></p>
 				</div>
 				
-				<div class="form-line">
+				<div class="form-group">
 					<p>
 						<input type="checkbox" id="user-check" required> Conditions of Agreement
 					</p>	
 					<p class="error"></p>
 				</div>
 
-				<div class="form-line">
+				<div class="form-group">
 					<a href="#" name="submit" id="submit" data-submit="...Sending">Submit</a>
 				</div>
 
