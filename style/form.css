@@ -21,8 +21,8 @@ body {
     font-size: 12px;
     line-height: 30px;
     color: #777;
-    /*background: #4CAF50;*/
-    background: #733789;
+    background: #4CAF50; /*- greenovi*/
+    /*background: #A878BA; - fiolet*/ 
 
 }
 
@@ -34,7 +34,8 @@ body {
 }
 .title-form {
     display: block;
-    font-size: 2.3em;
+    color: #6C4D77;
+    font-size: 2.7em;
     font-weight: 300;
     line-height: 1.2em;
     margin-bottom: 25px;
@@ -56,8 +57,9 @@ body {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
-.form-line {
+.form-group {
     border: medium none !important;
+    position: relative;
     margin: 0 0 10px;
     min-width: 100%;
     padding: 0;
@@ -73,26 +75,38 @@ body {
     background: #FFF;
     margin: 0 0 3px;
     padding: 10px;
+    color: #777;
     transition: all .3s ease-in-out;
 }
-p.error {
+
+p.error, p.server.error {
     text-align: center;
     color: #CE5252;
     margin: 0 0 10px;
-    background-color: pink
+    display: block;
+    background-color: pink;
+    position: relative;
+}
+p.error:hover {
+    cursor: pointer;
+}
+
+p.server-error {
+    font-size: 1.4em;
 }
 
 
 #contact .input-item:hover,
 #contact select:hover,
 #contact textarea:hover {
-    border: 1px solid #4CAF50;
+    border: 1px solid #A878BA;
 }
-
-#contact textarea {
-    height: 100px;
-    max-width: 100%;
-    resize: none;
+.check-line {
+    display: block;
+    text-align: center;
+}
+input[type="checkbox"]:hover {
+    cursor: pointer;
 }
 
 a#submit {
@@ -103,16 +117,17 @@ a#submit {
     text-decoration: none;
 
     border: none;
-    background: #E7E247;
-    color: #3D3B30;
-    margin: 0 0 5px;
+    background: #A878BA;
+    color: #fff;
+    margin: 20px 0 10px;
     padding: 10px;
     font-size: 1.5em;
-    transition: background-color 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 a#submit:hover {
     background: #43A047;
+    color: #fff;
     /*-webkit-transition: background 0.3s ease-in-out;
     -moz-transition: background 0.3s ease-in-out;*/
 }
@@ -153,16 +168,6 @@ input[placeholder]          {text-overflow:ellipsis;}
 input::-moz-placeholder     {text-overflow:ellipsis;} 
 input:-moz-placeholder      {text-overflow:ellipsis;} 
 input:-ms-input-placeholder {text-overflow:ellipsis;} 
-
-/*-------- Validation */
-input:required:valid {
-  border-color: green;
-}
-
-input:required:invalid {
-  border-color: red;
-}
-
 
 
 
